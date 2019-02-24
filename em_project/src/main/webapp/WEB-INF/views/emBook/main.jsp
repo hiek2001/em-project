@@ -9,17 +9,76 @@
  <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <!-- Index CSS -->
-<link rel="stylesheet" href="<c:url value= "/resources/css/main.css"/>">	
 <title>Excercise Management</title>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-
+<style>
+ .sidebar {
+        background: linear-gradient(to right, #1fa2ff, #12d8fa, #a6ffcb);
+        height: 100vh;
+    }
+    
+    .bar-font {
+        font-size: 30px;
+        zoom: 1.2;
+        font-family: 'Kanit', sans-serif;
+        padding-top: 30px;
+        color: snow;
+    }
+    
+    .on {
+        background-color: skyblue;
+        border-radius: 10px;
+        box-shadow: 0px 0px 14px -4px rgba(0, 0, 0, 0.5);
+        height: 15vh;
+        margin-left: 1%;
+        margin-top: 2%;
+    }
+    
+    .font1 {
+        color: seashell;
+        font-size: 15px;
+        font-family: 'Kanit', sans-serif;
+        zoom: 1.1;
+    }
+    
+    .font2 {
+        color: seashell;
+        font-size: 35px;
+        font-weight: 300;
+        text-align: right;
+        margin-right: 5px;
+    }
+    
+    .box1 {
+        background-color: lightseagreen;
+        height: 38vh;
+        border-radius: 10px;
+        box-shadow: 0px 0px 14px -4px rgba(0, 0, 0, 0.5);
+        margin-top: 3%;
+    }
+    
+    .box2 {
+        background-color: lightseagreen;
+        height: 38vh;
+        border-radius: 10px;
+        box-shadow: 0px 0px 14px -4px rgba(0, 0, 0, 0.5);
+        margin-top: 4.5%;
+    }
+    
+    .hello-font {
+        color: seashell;
+        font-size: 18px;
+        font-family: '나눔바른고딕', sans-serif;
+        zoom: 1.1;
+    }
+</style>
 </head>
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-3 sidebar"><br><br>
+            <div class="col-sm-2 sidebar"><br><br>
                 <ul class="list">
-                    <p class="hello-font">000님 안녕하세요!</p>
+                    <p class="hello-font">${memberLoggedIn.name }님 안녕하세요!</p>
                 </ul>
                 <ul class="list">
                     <p class="bar-font"><strong>Main</strong></p>
@@ -30,30 +89,49 @@
                     <p class="sbar-font"></p>
                 </ul>
             </div>
-            <div class="col-sm-9">
-                <div class="on-box">
-                    <div class="on">
-                        <p class="font1">&nbsp;&nbsp;&nbsp;FOOD</p>
-                        <hr>
-                        <p class="font2">0</p>
+             <div class="col-sm-10">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="on">
+                            <p class="font1">&nbsp;&nbsp;&nbsp;FOOD</p>
+                            <hr>
+                            <p class="font2">0</p>
+                        </div>
                     </div>
-                    <div class="on2">
-                        <p class="font1">&nbsp;&nbsp;&nbsp;EXCERCISE</p>
-                        <hr>
-                        <p class="font2">0</p>
+                    <div class="col-md-4">
+                        <div class="on">
+                            <p class="font1">&nbsp;&nbsp;&nbsp;EXCERCISE</p>
+                            <hr>
+                            <p class="font2">0</p>
+                        </div>
                     </div>
-                    <div class="on2">
-                        <p class="font1">&nbsp;&nbsp;&nbsp;BASIC METABOLISM</p>
-                        <hr>
-                        <p class="font2">0</p>
+                    <div class="col-md-4">
+                        <div class="on">
+                            <p class="font1">&nbsp;&nbsp;&nbsp;BASIC METABOLISM</p>
+                            <hr>
+                            <p class="font2">0</p>
+                        </div>
                     </div>
                 </div>
+
                 <div class="down-box">
-                    <div class="box1-1 down-left">1-1</div>
-                    <div class="box1-2 box3 min-kcal">1-2</div>
-                    <div class="box2-1 d-day">2-1</div>
-                    <div class="box2-2 pie">2-2</div>
-                    <div class="box2-2 ">2-3</div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="box1">1-1</div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="box1">1-2</div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="box2">2-1</div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="box2">2-2</div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="box2">2-3</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

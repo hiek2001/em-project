@@ -11,12 +11,20 @@
  <c:set value="${pageContext.request.contextPath}" var="path"/>
 <title>Login here</title>
 </head>
+<style>
+@media (max-width: 500px) {
+	img.img{display:none;}
+}
+
+</style>
 <body>
  <div class="container-fluid">
         <div class="row">
+        <!-- img 영역 -->
             <div class="col-12 col-md-8" style="background-color:rgb(247, 247, 247);">
             	<img class="img" src="${path }/resources/img/login_img.png">
             </div>
+            <!-- login 영역 -->
             <div class="col-6 col-md-4 login">
                 <br><br><br><br><br><br><br><br><br><br><br><br>
                 <span class="login100-form-title p-b-43">Login</span>

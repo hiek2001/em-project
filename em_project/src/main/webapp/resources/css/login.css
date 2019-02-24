@@ -1,12 +1,7 @@
 @charset="UTF-8";
- @media only screen and (max-width: 350px) {
-        .img {
-            display: none;
-        }
-    }
-    
+   * {margin:0;padding:0;}
     .img{
-    height:721px; width:990px;
+    height:100vh; width:80vh;
     }
     
     .login {
