@@ -1,7 +1,5 @@
 package com.spring.em.member.controller;
 
-import javax.servlet.http.HttpSession;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,25 +22,48 @@ public class MemberController {
 	MemberService service;
 	
 	//로그인 창에서 start를 누르면
-	@RequestMapping(value="/loginCheck.do", method=RequestMethod.POST)
-	public String loginCheck(String email, String password, HttpSession session) {
-		String returnURL="";
-		if(session.getAttribute("login")!=null) {
-			session.removeAttribute("login");
-		}
+	@RequestMapping(value="/loginCheck.do")
+	public ModelAndView loginCheck(String email, String password, Model model, ModelAndView mv) {
+		String msg="";
+		String loc="";
+		String status="";
 		
 		Member m =service.selectOne(email);
 		System.out.println("Controller:::::"+m);
-		
-		if(m != null && m.getPassword()==password) {
-			session.setAttribute("login", m);
-			returnURL="emBook/main";
+		System.out.println("입력password:::"+password);
+	
+		if(m == null) {
+			msg="존재하지 않는 아이디입니다.";
+			status="존재xFail";
+			loc="/";
 		}
 		else {
-			returnURL="login";
+			if(password.equals(m.getPassword())) {
+				msg="로그인 성공!";
+				mv.addObject("memberLoggedIn",m);
+				status="Success";
+				loc="/emBook.do";
+			}
+			else {
+				msg="비밀번호가 일치하지 않습니다.";
+				status="비번XFail";
+				loc="/";
+			}
 		}
+		System.out.println("status=============+" +status);
 		
-		return returnURL;
+		mv.addObject("msg",msg);
+		mv.addObject("loc",loc);
+		mv.addObject("status",status);
+		mv.setViewName("common/msg");
+		return mv;
 	}
+	
+	@RequestMapping(value="/emBook.do")
+	public String emBook() 
+	{
+		return "emBook/main";
+	}
+	
 	
 }

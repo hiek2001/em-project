@@ -31,15 +31,16 @@
 	                    <span class="focus-input100"></span>
 	                    <span class="label-input100">Password</span>
 	                </div>
+	            
 	                <div class="container-login100-form-btn">
 	                    <input type="submit" class="login100-form-btn" value="start">
 	                </div>
-	                <div class="text-center p-t-46 p-b-20">
-	                    <span class="txt2">
-	                        or sign up using
-	                        </span>
-	                </div>
-                </form>
+	            </form>
+                <div class="text-center p-t-46 p-b-20">
+                    <span class="txt2">
+                        or sign up using
+                        </span>
+                </div>
             </div>
         </div>
     </div>

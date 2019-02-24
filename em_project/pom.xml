@@ -21,6 +21,7 @@
 	</repositories>
 	
 	<dependencies>
+	<!-- mybatis 설정 -->
 	<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
 		<dependency>
 		    <groupId>org.mybatis</groupId>

@@ -14,35 +14,6 @@
 	response.setContentType("text/html;charset=UTF-8");
 %>
 
-if('${status}'=="loginSuccess"){
-
-   swal({
-        text: "${msg}",
-        icon: "success",
-        button: "확인",
-      }).then((willDelete) => {
-           
-         location.href="${path}${loc}";
-             }); 
-}else if('${status}'=="endrollSuccess"){
-	swal({
-        text: "${msg}",
-        icon: "success",
-        button: "확인",
-      }).then((willDelete) => {
-           
-         location.href="${path}${loc}";
-             }); 
-}
-else{
-   swal({
-        text: "${msg}",
-        icon: "warning",
-        button: "확인",
-      }).then((willDelete) => {  
-    	  
-         location.href="${path}${loc}";
-             }); 
-}
-
+	alert('${msg}');
+	location.href="${path}${loc}";
 </script>
