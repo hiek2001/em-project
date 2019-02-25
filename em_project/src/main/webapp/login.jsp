@@ -45,9 +45,7 @@
 	                </div>
 	            </form>
                 <div class="text-center p-t-46 p-b-20">
-                    <span class="txt2">
-                        or sign up using
-                        </span>
+                    <a class="txt2" href="${path }/memberEnroll.do">or sign up using</a>
                 </div>
             </div>
         </div>

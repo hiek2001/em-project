@@ -14,4 +14,10 @@ public class MemberDaoImpl implements MemberDao {
 		return sqlSession.selectOne("member.selectOne",email);
 	}
 
+	@Override
+	public int memberEnrollEnd(SqlSessionTemplate sqlSession, Member member) {
+		System.out.println("Dao:::"+member);
+		return sqlSession.insert("member.memberEnrollEnd",member);
+	}
+
 }

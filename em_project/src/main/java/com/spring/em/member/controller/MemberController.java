@@ -59,11 +59,46 @@ public class MemberController {
 		return mv;
 	}
 	
+	//메인 화면으로 페이지 이동
 	@RequestMapping(value="/emBook.do")
 	public String emBook() 
 	{
 		return "emBook/main";
 	}
 	
+	//회원가입 페이지로 이동
+	@RequestMapping(value="/memberEnroll.do")
+	public String memberEnroll() 
+	{
+		return "member/enroll";
+	}
 	
+	//회원가입 등록
+	@RequestMapping(value="/memberEnrollEnd.do")
+	public ModelAndView memberEnrollEnd(Member member) 
+	{
+		ModelAndView mv=new ModelAndView();
+		System.out.println("입력받은 member:::"+member);
+		int result=service.memberEnrollEnd(member);
+		String msg="";
+		String loc="";
+		if(result>0) {
+			msg="회원가입이 완료되었습니다.";
+			loc="/login.do";
+		}
+		else {
+			msg="회원가입이 실패했습니다.";
+			loc="/";
+		}
+		mv.addObject("msg",msg);
+		mv.addObject("loc",loc);
+		mv.setViewName("common/msg");
+		return mv;
+	}
+	
+	//회원가입 후 로그인 화면으로 이동
+	@RequestMapping(value="/login.do")
+	public String login() {
+		return "login";
+	}
 }

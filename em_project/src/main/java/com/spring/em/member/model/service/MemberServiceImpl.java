@@ -22,4 +22,10 @@ public class MemberServiceImpl implements MemberService {
 		return dao.selectOne(sqlSession,email);
 	}
 
+	@Override
+	public int memberEnrollEnd(Member member) {
+		System.out.println("Service:::"+member);
+		return dao.memberEnrollEnd(sqlSession,member);
+	}
+
 }
