@@ -90,6 +90,7 @@ public class MemberController {
 		member.setWeight(Integer.parseInt(request.getParameter("weight")));
 		member.setBm(Integer.parseInt(request.getParameter("bm")));
 		
+		
 		System.out.println("입력받은 member:::"+member);
 		int result=service.memberEnrollEnd(member);
 		String msg="";
@@ -111,6 +112,6 @@ public class MemberController {
 	//회원가입 후 로그인 화면으로 이동
 	@RequestMapping(value="/login.do")
 	public String login() {
-		return "login";
+		return "member/login";
 	}
 }
