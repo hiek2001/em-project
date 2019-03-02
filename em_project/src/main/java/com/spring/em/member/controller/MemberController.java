@@ -1,5 +1,7 @@
 package com.spring.em.member.controller;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -75,9 +77,19 @@ public class MemberController {
 	
 	//회원가입 등록
 	@RequestMapping(value="/memberEnrollEnd.do")
-	public ModelAndView memberEnrollEnd(Member member) 
+	public ModelAndView memberEnrollEnd(HttpServletRequest request) throws Exception
 	{
 		ModelAndView mv=new ModelAndView();
+		Member member=new Member();
+		member.setEmail(request.getParameter("email"));
+		member.setPassword(request.getParameter("password"));
+		member.setName(request.getParameter("name"));
+		member.setGender(request.getParameter("gender"));
+		member.setAge(Integer.parseInt(request.getParameter("age")));
+		member.setHeight(Integer.parseInt(request.getParameter("height")));
+		member.setWeight(Integer.parseInt(request.getParameter("weight")));
+		member.setBm(Integer.parseInt(request.getParameter("bm")));
+		
 		System.out.println("입력받은 member:::"+member);
 		int result=service.memberEnrollEnd(member);
 		String msg="";
