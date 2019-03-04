@@ -72,6 +72,7 @@
         zoom: 1.1;
     }
 </style>
+
 </head>
 <body>
     <div class="container-fluid">
@@ -109,7 +110,7 @@
                         <div class="on">
                             <p class="font1">&nbsp;&nbsp;&nbsp;BASIC METABOLISM</p>
                             <hr>
-                            <p class="font2">0</p>
+                            <p class="font2" data-to="${memberLoggedIn.bm }" data-speed="1500"></p>
                         </div>
                     </div>
                 </div>

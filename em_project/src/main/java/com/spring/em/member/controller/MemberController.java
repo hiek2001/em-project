@@ -79,6 +79,7 @@ public class MemberController {
 	@RequestMapping(value="/memberEnrollEnd.do")
 	public ModelAndView memberEnrollEnd(HttpServletRequest request) throws Exception
 	{
+		//회원가입
 		ModelAndView mv=new ModelAndView();
 		Member member=new Member();
 		member.setEmail(request.getParameter("email"));
@@ -87,12 +88,13 @@ public class MemberController {
 		member.setGender(request.getParameter("gender"));
 		member.setAge(Integer.parseInt(request.getParameter("age")));
 		member.setHeight(Integer.parseInt(request.getParameter("height")));
-		member.setWeight(Integer.parseInt(request.getParameter("weight")));
-		member.setBm(Integer.parseInt(request.getParameter("bm")));
-		
+		member.setWeight(Integer.parseInt(request.getParameter("weight")));		
 		
 		System.out.println("입력받은 member:::"+member);
 		int result=service.memberEnrollEnd(member);
+		
+		//기초대사량 자동 계산
+		
 		String msg="";
 		String loc="";
 		if(result>0) {

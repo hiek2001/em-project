@@ -63,11 +63,6 @@
                         <span class="focus-input100"></span>
                         <span class="label-input100">Weight</span>
                     </div>
-                    <div class="wrap-input100 validate-input">
-                        <input class="input100 has-val" type="number" name="bm" placeholder="모르면 공백으로 남겨주세요">
-                        <span class="focus-input100"></span>
-                        <span class="label-input100">Basic Metabolism</span>
-                    </div>
                     <div class="container-login100-form-btn">
                         <input type="submit" class="login100-form-btn" value="OK">
                     </div>
