@@ -110,7 +110,7 @@
                         <div class="on">
                             <p class="font1">&nbsp;&nbsp;&nbsp;BASIC METABOLISM</p>
                             <hr>
-                            <p class="font2" data-to="${memberLoggedIn.bm }" data-speed="1500"></p>
+                            <p class="font2">${memberLoggedIn.bm }</p>
                         </div>
                     </div>
                 </div>

@@ -63,6 +63,13 @@
                         <span class="focus-input100"></span>
                         <span class="label-input100">Weight</span>
                     </div>
+                     <div class="wrap-input100 validate-input margin-left" >
+                        <input class="input100 has-val" type="number" name="bm">
+                        <span class="focus-input100"></span>
+                       
+                        <span class="label-input100">Basic Metabolism</span>
+                         <img style="float:right;" src="${path }/resources/img/question_mark.png" title="기초대사량 계산 방법">
+                    </div>
                     <div class="container-login100-form-btn">
                         <input type="submit" class="login100-form-btn" value="OK">
                     </div>

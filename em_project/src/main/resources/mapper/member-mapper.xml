@@ -14,7 +14,7 @@
 		select * from member where email=#{email} 
 	</select>
 	<insert id="memberEnrollEnd" parameterType="member">
-		insert into member(email,password,name,gender,age,height,weight) 
-		values (#{email},#{password},#{name},#{gender},#{age},#{height},#{weight})
+		insert into member(email,password,name,gender,age,height,weight,bm) 
+		values (#{email},#{password},#{name},#{gender},#{age},#{height},#{weight},#{bm})
 	</insert>
 </mapper>
