@@ -7,10 +7,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
  <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <!-- Index CSS -->
 <title>Excercise Management</title>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <style>
  .sidebar {
         background: linear-gradient(to right, #1fa2ff, #12d8fa, #a6ffcb);
@@ -71,6 +73,10 @@
         font-family: '나눔바른고딕', sans-serif;
         zoom: 1.1;
     }
+    .logout {
+    	position:relative;
+    	left:10px;
+    }
 </style>
 
 </head>
@@ -79,7 +85,7 @@
         <div class="row">
             <div class="col-sm-2 sidebar"><br><br>
                 <ul class="list">
-                    <p class="hello-font">${memberLoggedIn.name }님 안녕하세요!</p>
+                    <p class="hello-font">${memberLoggedIn.name }님, 반갑습니다!</p>
                 </ul>
                 <ul class="list">
                     <p class="bar-font"><strong>Main</strong></p>
@@ -89,6 +95,8 @@
                     <p class="bar-font"><strong>My Book</strong></p>
                     <p class="sbar-font"></p>
                 </ul>
+                <img src="${path }/resources/img/logout.png">
+               	<a class="hello-font" href="${path }/memberLogout.do">Logout</a>
             </div>
              <div class="col-sm-10">
                 <div class="row">

@@ -1,6 +1,7 @@
 package com.spring.em.member.controller;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -8,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -115,5 +115,13 @@ public class MemberController {
 	@RequestMapping(value="/login.do")
 	public String login() {
 		return "member/login";
+	}
+	
+	//로그아웃
+	@RequestMapping("/memberLogout.do")
+	public String memberLogout(HttpSession session) {
+		System.out.println("::::::로그아웃~~~~~::::::");
+		session.invalidate();
+		return "redirect:/";
 	}
 }
