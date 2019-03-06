@@ -96,7 +96,7 @@
                     <p class="sbar-font"></p>
                 </ul>
                 <img src="${path }/resources/img/logout.png">
-               	<a class="hello-font" href="${path }/memberLogout.do">Logout</a>
+               	<a class="hello-font" href="${path }/memberLogout.do">LogOut</a>
             </div>
              <div class="col-sm-10">
                 <div class="row">

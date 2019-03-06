@@ -29,6 +29,11 @@
    			
    			<beans:bean id="loggerInterceptor" class="com.spring.em.common.interceptor.LoggerInterceptor"></beans:bean>
    		</interceptor>
+   		<interceptor>
+   			<mapping path="/emBook/**/*.do"/>
+   			
+   			<beans:bean id="LoginCheckInterceptor" class="com.spring.em.common.interceptor.LoginCheckInterceptor"></beans:bean>
+   		</interceptor>
    	</interceptors>
 	
 </beans:beans>

@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -118,10 +119,10 @@ public class MemberController {
 	}
 	
 	//로그아웃
-	@RequestMapping("/memberLogout.do")
+	@RequestMapping(value="/memberLogout.do", method=RequestMethod.GET)
 	public String memberLogout(HttpSession session) {
 		System.out.println("::::::로그아웃~~~~~::::::");
-		session.invalidate();
-		return "redirect:/";
+		session.removeAttribute("m");
+		return "/login.do";
 	}
 }

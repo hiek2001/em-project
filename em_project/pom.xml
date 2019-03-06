@@ -21,6 +21,27 @@
 	</repositories>
 	
 	<dependencies>
+	<!-- 스프링 시큐리티 -->
+      <!-- 5.0.6버전에서는 shaPsswordEncoder는 사용할 수 없음. BCrypatPasswordEncoder를 사용 하겠음-->
+      <!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-core -->
+      <dependency>
+          <groupId>org.springframework.security</groupId>
+          <artifactId>spring-security-core</artifactId>
+          <version>5.0.6.RELEASE</version>
+      </dependency>
+      
+      <!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-web -->
+      <dependency>
+          <groupId>org.springframework.security</groupId>
+          <artifactId>spring-security-web</artifactId>
+          <version>5.0.6.RELEASE</version>
+      </dependency>
+      <!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-config -->
+      <dependency>
+          <groupId>org.springframework.security</groupId>
+          <artifactId>spring-security-config</artifactId>
+          <version>5.0.6.RELEASE</version>
+      </dependency>
 	<!-- mybatis 설정 -->
 	<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
 		<dependency>
